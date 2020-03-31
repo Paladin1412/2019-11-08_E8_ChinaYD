@@ -1,0 +1,40 @@
+.fr {
+    float: right;
+}
+.fr button {
+    float: right;
+    height: 34px;
+}
+.commonButton {
+    background: #0085d0;
+    border: 1px solid #0085d0;
+    min-width: 66px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: -1px 3px;
+    line-height: 16px;
+    width: auto;
+    font-size: 14px;
+}
+.commonButton .btnSpan {
+    white-space: nowrap;
+    display: block;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 22px;
+    -webkit-padding: 4px 6px 3px 6px;
+    padding: 4px 6px 4px 6px;
+    padding: 5px 10px 2px 6px\0;
+    _padding: 4px 10px 3px 6px;
+}
+
+.clearButton{
+	background:#fff; 
+	border: 1px solid #ccc;
+	min-width:66px;
+	border-radius:4px;
+	cursor: pointer;
+	margin: -1px 3px;	
+	line-height: 16px;
+	width:auto;
+}

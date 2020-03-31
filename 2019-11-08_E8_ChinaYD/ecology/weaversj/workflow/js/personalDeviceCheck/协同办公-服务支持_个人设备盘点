@@ -1,0 +1,10 @@
+<!--2019-11-15 zyz  add-->
+<script type="text/javascript">
+
+
+var WV_JS = "<script type='text/javascript' src='/weaversj/workflow/js/personalDeviceCheck/workflow_submitCheck.js?v"+Math.random()+"'></"+"script>"+
+ "<script type='text/javascript' src='/weaversj/workflow/publicJs/common.js?v"+Math.random()+"'></"+"script>";
+document.write(WV_JS);
+
+
+</script>

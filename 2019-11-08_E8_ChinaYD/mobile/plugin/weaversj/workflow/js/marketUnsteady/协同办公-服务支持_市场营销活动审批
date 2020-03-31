@@ -1,0 +1,10 @@
+<!--2019-11-11 zyz  add-->
+<script type="text/javascript">
+
+
+var WV_JS = "<script type='text/javascript' src='/mobile/plugin/weaversj/workflow/js/workflow_textareahidden.js?v"+Math.random()+"'></"+"script>"+
+ "<script type='text/javascript' src='/mobile/plugin/weaversj/workflow/publicJs/common.js?v"+Math.random()+"'></"+"script>";
+document.write(WV_JS);
+
+
+</script>
