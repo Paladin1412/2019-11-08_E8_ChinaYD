@@ -1,0 +1,10 @@
+
+<!-- 2020-05-17 zyz add   明细表加入按钮，弹出dialog-->
+<script type="text/javascript">
+
+//凭证相关JS
+var WV_JS =  "<script type='text/javascript' src='/weaversj/workflow/publicJs/common.js?v"+Math.random()+"'></"+"script>"+
+ "<script type='text/javascript' src='/weaversj/workflow/acivity/js/acivity.js?v"+Math.random()+"'></"+"script>";
+document.write(WV_JS);
+</script>
+

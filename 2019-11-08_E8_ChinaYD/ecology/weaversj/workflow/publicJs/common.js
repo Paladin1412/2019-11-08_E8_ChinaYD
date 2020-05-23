@@ -2059,3 +2059,39 @@ function getEleHideFlag(ids){
 	}
 	return false;
 }
+
+/**
+ * 给字段添加必填验证。
+ */
+var addInputCheckField = function(fieldId, spanImgId) {
+    jQuery('#' + fieldId).attr('viewtype', '1');
+    var fieldStr = jQuery('input[name=needcheck]').val();
+    if (fieldStr.charAt(fieldStr.length - 1) != ',') {
+        fieldStr += ',';
+    }
+    jQuery('input[name=needcheck]').val(fieldStr + fieldId + ',');
+    if(jQuery('#' + fieldId).val().replace(/(^s*)|(s*jQuery)/g, "").length ===0)
+        jQuery('#' + spanImgId).html('<img src="/images/BacoError_wev8.gif" align="absMiddle">');
+};
+
+/**
+ * 移除字段必填验证。//viewtype 0 编辑 1必填
+ */
+var removeInputCheckField = function(fieldId, spanImgId) {
+    jQuery('#' + fieldId).attr('viewtype', '0');
+    var fieldStr = jQuery('input[name=needcheck]').val();
+    jQuery('input[name=needcheck]').val(fieldStr.replace(fieldId + ',', ''));
+    jQuery('#' + spanImgId).html('');
+};
+
+
+function getButton(name,fun){
+	var funct = "openDia()";
+	if(fun != "" || typeof(fun)== "undefined" || fun != null){
+		funct = fun;
+	}
+	var button = "<input style='overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 300px;"+
+	"color:#FFFFFF !important;' class='e8_btn_top_first' title='"+name+"' value='"+name+"' type='button' "+
+	"onclick="+funct+" _disabled='true' >";
+	return button;
+}

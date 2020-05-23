@@ -1,0 +1,1191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    scrollbar-face-color: #eee;
+    /*滚动条3D表面（ThreedFace）的颜色*/
+    scrollbar-highlight-color: #fff;
+    /*滚动条3D界面的亮边（ThreedHighlight）颜色*/
+    scrollbar-shadow-color: #eeeeee;
+    /*滚动条3D界面的暗边（ThreedShadow）颜色*/
+    scrollbar-3dlight-color: #eeeeee;
+    /*滚动条亮边框颜色*/
+    scrollbar-arrow-color: #000;
+    /*滚动条方向箭头的颜色 */
+    scrollbar-track-color: #fff;
+    /*滚动条的拖动区域(TrackBar)颜色*/
+    scrollbar-darkshadow-color: #fff;
+    /*滚动条暗边框（ThreedDarkShadow）颜色*/
+}
+
+/*滚动条*/
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #f1f1f1;
+}
+
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(205, 205, 205, 0.3);
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -moz-box-shadow: inset 0 0 6px rgba(205, 205, 205, .3);
+    background-color: #cdcdcd;
+}
+
+::-moz-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #f1f1f1;
+}
+
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-moz-scrollbar-track {
+    -moz-box-shadow: inset 0 0 6px rgba(205, 205, 205, 0.3);
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+
+
+/*定义滑块 内阴影+圆角*/
+
+::-moz-scrollbar-thumb {
+    border-radius: 10px;
+    -moz-box-shadow: inset 0 0 6px rgba(205, 205, 205, .3);
+    background-color: #cdcdcd;
+}
+
+
+/*滚动条*/
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    background-color: #fff;
+    /*font: 12px "Classic Grotesque W01","Hiragino Sans GB","STHeiti","Microsoft YaHei","WenQuanYi Micro Hei",Arial,SimSun,sans-serif;*/
+    text-align: center;
+}
+
+img {
+    border: 0;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+menu, ul, ol {
+    list-style: none;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+iframe {
+    border: 0;
+}
+
+a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: gray;
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: "Microsoft yahei";
+    src: url('../fonts/yahei.eot'); /* IE9*/
+    src: url('../fonts/yahei.eot') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/msyh.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}
+
+a.sliver {
+    color: #999;
+}
+
+    a.sliver:link, a.sliver:visited {
+        text-decoration: none;
+    }
+
+    a.sliver:hover, a.sliver:active {
+        text-decoration: underline;
+    }
+
+a.blue {
+    color: #06C;
+}
+
+    a.blue:link, a.blue:visited {
+        text-decoration: none;
+    }
+
+    a.blue:hover, a.blue:active {
+        text-decoration: underline;
+    }
+
+input.sText {
+    border: 1px solid gray;
+    width: 70px;
+}
+
+input.mText {
+    border: 1px solid gray;
+    width: 100px;
+}
+
+input.bText {
+    border: 1px solid gray;
+    width: 90%;
+}
+
+.black {
+    color: black;
+}
+
+    .black a {
+        color: black;
+    }
+
+.red {
+    color: red;
+}
+
+.bfont {
+    font-weight: bold;
+}
+
+.bigFont {
+    font-size: 14px;
+}
+
+.yFont {
+    color: #e90111;
+}
+
+.topline {
+    line-height: 0;
+    height: 16px;
+    width: 990px;
+    background: #E7EEFE url(../img/bgTopLine.gif) no-repeat center bottom;
+    margin: 0 auto;
+}
+
+.bottomline {
+    line-height: 0;
+    height: 16px;
+    width: 990px;
+    background: #E7EEFE url(../img/bgBottomLine.gif) no-repeat center top;
+    margin: 0 auto;
+}
+
+.button2 {
+    cursor: pointer;
+    margin: 1px 0;
+    font-size: 14px;
+    border: 0;
+    background-color: #0085d0;
+    color: #fff;
+    border: 1px solid #0085d0;
+    padding: 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius:5px;
+    -moz-border-radius: 5px;
+    height: 34px;
+    margin-right: 5px;
+    text-align: center;
+    min-width: 80px;
+}
+
+.button2:hover{background-color:#30b0d5;border:1px solid #30b0d5;}
+
+input[type="submit"].button2 {
+    color: #3d3d3d;
+    margin-right: 1%;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+#listGridPager input[type="submit"].button2 {
+    color: #3d3d3d;
+    margin-right: 10px;
+    background-color: #fff;
+    width: 50px;
+    font-size: 14px;
+    border-color: transparent;
+}
+
+.listGridPagerPageIndex {
+    width: 30px;
+    border: 1px solid #ebebeb;
+    padding: 0px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #6e6e6e;
+}
+
+.wenjiantext {
+    color: blue;
+    line-height: 30pt;
+    height: 40px;
+    text-align: right;
+    vertical-align: baseline;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.button4 {
+    cursor: pointer;
+    margin: 3px 5px;
+    font-size: 12px;
+    border: 0;
+    background-color: #fff;
+    color: #22a2ea;
+    border: 1px solid #22a2ea;
+    padding: 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    line-height: 20px;
+    height: 35px;
+    text-align: center;
+    width: 98px;
+}
+
+.button6 {
+    cursor: pointer;
+    margin: 1px 0;
+    font-size: 12px;
+    border: 0;
+    background-color: #fff;
+    color: #22a2ea;
+    border: 1px solid #22a2ea;
+    padding: 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -moz-border-radius: 5px;
+    height: 35px;
+    text-align: center;
+    width: 110px;
+}
+
+#divSearch .button2 {
+    height: 22px;
+    position: relative;
+    top: 1px;
+}
+
+.center {
+    text-align: center;
+}
+
+.pageClass {
+    clear: both;
+    font-size: 12px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+    border-top: 1px solid silver;
+    padding-top: 10px;
+    text-align: right;
+}
+
+    .pageClass ul {
+        list-style: none;
+        float: right;
+    }
+
+    .pageClass li {
+        float: left;
+        border: 1px solid silver;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        margin-right: 4px;
+    }
+
+    .pageClass a {
+        display: block;
+        width: 18px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+        .pageClass a:link, .page a:visited {
+            background: white;
+            color: gray;
+        }
+
+        .pageClass a:hover, #pageClass a:active {
+            background: gray;
+            color: white;
+        }
+
+    .pageClass .pagebtn {
+        width: auto;
+    }
+
+        .pageClass .pagebtn a {
+            width: auto;
+            padding: 0 4px;
+        }
+
+    .pageClass .active a {
+        background: #ccc;
+        color: white;
+    }
+
+.pageClass1 {
+    clear: both;
+    font-size: 12px;
+    width: 750px;
+    overflow: hidden;
+    border-bottom: 1px solid silver;
+}
+
+    .pageClass1 p {
+        float: left;
+        height: 24px;
+        line-height: 24px;
+        text-indent: 20px;
+    }
+
+    .pageClass1 ul {
+        list-style: none;
+        float: right;
+    }
+
+    .pageClass1 li {
+        float: left;
+        border: 1px solid silver;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        margin-right: 4px;
+    }
+
+    .pageClass1 a {
+        display: block;
+        width: 18px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+        .pageClass1 a:link, .page a:visited {
+            background: white;
+            color: gray;
+        }
+
+        .pageClass1 a:hover, #pageClass a:active {
+            background: gray;
+            color: white;
+        }
+
+    .pageClass1 .pagebtn {
+        width: auto;
+    }
+
+        .pageClass1 .pagebtn a {
+            width: auto;
+            padding: 0 4px;
+        }
+
+    .pageClass1 .active a {
+        background: #ccc;
+        color: white;
+    }
+
+.fleft {
+    float: left;
+    font-weight: normal;
+    margin: 8px 0px;
+}
+
+.fright {
+    float: left;
+}
+
+.fright2 {
+    float: right;
+}
+
+.ulinline {
+}
+
+    .ulinline li {
+        display: inline;
+    }
+
+.noMargin {
+    margin-bottom: 0;
+}
+/*二级导航*/
+.publicMenu {
+    clear: both;
+    height: 42px;
+    margin: 0 auto;
+    color: #eee;
+    font-size: 14px;
+    background-color: #dd8581;
+}
+
+    .publicMenu h3 {
+        font-size: 12px;
+        width: 100px;
+        float: left;
+        margin-left: 10px;
+        background-repeat: no-repeat;
+        height: 33px;
+    }
+
+        .publicMenu h3.oaMenuName {
+            background-image: url(../img/menuNameOA.gif);
+        }
+
+        .publicMenu h3.oaMenuName2 {
+            background-image: url(../img/menuNameOA2.gif);
+        }
+
+        .publicMenu h3.kmMenuName {
+            background-image: url(../img/menuNameKM.gif);
+        }
+
+        .publicMenu h3.essMenuName {
+            background-image: url(../img/menuNameESS.gif);
+        }
+
+        .publicMenu h3.ptMenuName {
+            background-image: url(../img/menuNamePt.gif);
+        }
+
+        .publicMenu h3 a {
+            display: block;
+            width: 100px;
+            height: 33px;
+        }
+
+        .publicMenu h3 span {
+            display: none;
+        }
+
+    /*20080126为OA模块修改
+    .publicMenu ul{float:left;width:820px;height:28px;padding-top:8px;overflow:hidden;margin-left:30px;}
+    */
+    .publicMenu ul {
+        float: left;
+        width: 550px;
+        height: 42px;
+        line-height: 42px;
+        overflow: hidden;
+        margin-left: 10px;
+    }
+
+    .publicMenu li {
+        float: left;
+        margin-right: 0px;
+        padding-left: 9px;
+        height: 42px;
+        line-height: 42px;
+        border-right: 1px solid #0085D0;
+        border-top: 2px solid #22a2ea;
+    }
+        /*20080126为OA模块修改*/
+        .publicMenu li.oldOa {
+            height: 42px;
+            line-height: 42px;
+        }
+
+            .publicMenu li.oldOa a {
+                display: block;
+                width: 40px;
+                height: 42px;
+                line-height: 42px;
+            }
+
+                .publicMenu li.oldOa a.oldOa2 {
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding-left: 20px;
+                }
+
+                .publicMenu li.oldOa a span.h {
+                    display: none;
+                }
+
+        .publicMenu li.oldOa3 {
+            margin-right: 20px;
+            height: 42px;
+            line-height: 42px;
+        }
+
+            .publicMenu li.oldOa3 a {
+                display: block;
+                width: 100px;
+                height: 42px;
+                line-height: 42px;
+            }
+
+                .publicMenu li.oldOa3 a.oldOa4 {
+                    font-size: 18px;
+                    font-weight: bold;
+                    width: 100px;
+                    padding-left: 74px;
+                }
+
+                    .publicMenu li.oldOa3 a.oldOa4 span {
+                        line-height: 30px;
+                    }
+
+                .publicMenu li.oldOa3 a span.h {
+                    display: none;
+                }
+    /*2008-02-28添加右侧身份切换*/
+    .publicMenu .userRight {
+        float: right;
+        padding-top: 8px;
+        padding-right: 10px;
+    }
+
+        .publicMenu .userRight p {
+            float: left;
+            line-height: 24px;
+            padding: 0 5px;
+            border: 1px solid #ebebeb;
+        }
+
+        .publicMenu .userRight input {
+            float: left;
+            margin-left: 10px;
+        }
+
+    .publicMenu a {
+        display: block;
+        padding-right: 9px;
+    }
+
+        .publicMenu a:link, .publicMenu a:visited {
+            color: #eee;
+            text-decoration: none;
+        }
+
+        .publicMenu a:hover, .publicMenu a:active {
+            color: #fff;
+            text-decoration: none;
+        }
+
+    .publicMenu li.c {
+        background-color: #0085D0;
+    }
+
+        .publicMenu li.c a {
+            color: #ffffff;
+        }
+
+.logo img {
+    float: left;
+    display: inline-block;
+}
+/*左侧菜单*/
+.pubSidebar {
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 190px;
+    text-align: left;
+    min-height: 200px;
+    background: white;
+    border-top: 3px solid #22a2ea;
+}
+
+* html .pubSidebar {
+    height: 200px;
+}
+
+    .pubSidebar h3 {
+        display: none;
+        font-weight: normal;
+        background: #f2f2f2 url(../img/iconSidebar.png) no-repeat 4px 14px;
+        color: #333333;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        text-indent: 24px;
+        border-bottom: 2px solid #d8e0ec;
+    }
+
+        .pubSidebar h3 a {
+            color: White;
+        }
+            /*刷新按钮*/
+            .pubSidebar h3 a.btnRefresh:link, .pubSidebar h3 a.btnRefresh:visited {
+                width: 16px;
+                height: 30px;
+                background: transparent url(../img/iconRefresh.png) no-repeat 0px 14px;
+            }
+
+            .pubSidebar h3 a.btnRefresh:hover, .pubSidebar h3 a.btnRefresh:active {
+                width: 16px;
+                height: 17px;
+                background: transparent url(../img/iconRefresh.png) no-repeat 0px -14px;
+                position: relative;
+                top: 11px;
+            }
+
+            .pubSidebar h3 a.btnRefresh span {
+                display: none
+            }
+
+    .pubSidebar dl {
+        background: white;
+        padding-top: 0px;
+    }
+
+    .pubSidebar dt {
+        cursor: pointer;
+        border: 1px dashed #bdc9d2;
+        text-indent: 35px;
+        height: 40px;
+        line-height: 40px;
+        background: #f6f8fa url(../img/iconRight3.png) no-repeat 9px 10px;
+        margin: 10px;
+    }
+
+        .pubSidebar dt a {
+            color: black;
+            text-decoration: none;
+        }
+
+    .pubSidebar dd {
+        display: none;
+        padding: 5px 0;
+        margin-left: 15px;
+        width: 85%;
+    }
+
+    .pubSidebar li {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #dedede;
+    }
+
+        .pubSidebar li.child1 {
+            font-size: 12px;
+            width: 140px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: bold;
+            text-indent: 32px;
+            background-image: url(../img/arrBlack.gif);
+            background-repeat: no-repeat;
+            background-position: 23px 10px;
+            border-bottom: 0;
+            display: none
+        }
+
+        .pubSidebar li.child {
+            text-indent: 22px;
+            background-image: url(../img/arrBlack.gif);
+            background-repeat: no-repeat;
+            background-position: 12px 10px;
+            border-bottom: 0;
+            display: none
+        }
+
+        .pubSidebar li.plus {
+            text-indent: 13px;
+            background-image: url(../img/lines/plus.gif);
+            background-repeat: no-repeat;
+            background-position: -5px 0px;
+            border-bottom: 0;
+        }
+
+        .pubSidebar li.minus {
+            text-indent: 13px;
+            background-image: url(../img/lines/minus.gif);
+            background-repeat: no-repeat;
+            background-position: -5px 0px;
+            border-bottom: 0;
+        }
+
+    .pubSidebar dt.h {
+        background: #E4E4E4 url(../img/iconDown.png) no-repeat 4px 10px;
+    }
+
+    .pubSidebar dd.h {
+        display: block;
+    }
+
+    .pubSidebar li.plus a {
+        font-size: 12px;
+    }
+
+    .pubSidebar dd a {
+        display: block;
+        text-decoration: none;
+    }
+
+    .pubSidebar dd li:first-child a:link, .pubSidebar dd li:first-child a:visited {
+        color: #333;
+    }
+
+    .pubSidebar dd a:link, .pubSidebar dd a:visited {
+        color: #999;
+    }
+
+    .pubSidebar dd a:hover, .pubSidebar dd a:active {
+        color: black;
+    }
+    /*左侧菜单无子级连接样式*/
+    .pubSidebar a.lnksidebar {
+        position: relative;
+        display: block;
+        text-indent: 35px;
+        height: 40px;
+        line-height: 40px;
+        background: #ffffff url(../img/iconRight4.png) no-repeat 23px 8px;
+        margin: 2px 0px;
+        padding: 0px 15px;
+        border: 1px dashed #fff;
+        color: #242424;
+        font-size: 16px;
+        border-left: 3px solid #fff;
+    }
+
+        .pubSidebar a.lnksidebar:focus, .pubSidebar a.lnksidebar:active {
+            color: #0085d0 !important;
+            border-left: 3px solid #0085d0;
+        }
+
+    /*2008-02-28修改OA模块左侧菜单样式*/
+    .pubSidebar a.icon3 {
+        background: #ffffff url(../img/oaIconIndex/mini-icon-待閱.png) no-repeat 23px 8px;
+    }
+
+    .pubSidebar a.icon4 {
+        background: #ffffff url(../img/oaIconIndex/mini-icon-已辦.png) no-repeat 23px 8px;
+    }
+    .pubSidebar dt.icon1 {
+        background: #ffffff url(../img/oaIconIndex/myyjb.png) no-repeat 23px 8px;
+        text-indent: 35px;
+    }
+    .pubSidebar a.icon1 {
+        background: #ffffff url(../img/oaIconIndex/mini-icon-關注.png) no-repeat 23px 8px;
+        text-indent: 35px;
+    }
+
+    .pubSidebar a.icon2 {
+        background: #ffffff url(../img/oaIconIndex/mini-icon-待辦.png) no-repeat 23px 8px;
+    }
+
+    .pubSidebar a.icon5 {
+        background: #ffffff url(../img/oaIconIndex/mini-icon-已閱.png) no-repeat 23px 8px;
+    }
+    .pubSidebar a.icon6 {
+        background: #ffffff url(../img/oaIconIndex/mini-icon-創建交件.png) no-repeat 23px 8px;
+    }
+    .pubSidebar a.icon7 {
+        background: #ffffff url(../img/oaIconIndex/mini-icon-草稿.png) no-repeat 23px 8px;
+    }
+
+    .pubSidebar li.icon21 {
+        background: url(../img/oaIconIndex/icon21.gif) no-repeat 0px 9px;
+        text-indent: 20px;
+        border-bottom: 0;
+    }
+
+    .pubSidebar li.icon22 {
+        background: url(../img/oaIconIndex/icon22.gif) no-repeat 0px 9px;
+        text-indent: 20px;
+        border-bottom: 0;
+    }
+
+    .pubSidebar li.icon23 {
+        background: url(../img/oaIconIndex/icon23.gif) no-repeat 0px 9px;
+        text-indent: 20px;
+        border-bottom: 0;
+    }
+
+    .pubSidebar li.icon24 {
+        background: url(../img/oaIconIndex/icon24.gif) no-repeat 0px 9px;
+        text-indent: 20px;
+        border-bottom: 0;
+    }
+
+    .pubSidebar li.icon25 {
+        background: url(../img/oaIconIndex/icon25.gif) no-repeat 0px 9px;
+        text-indent: 20px;
+        border-bottom: 0;
+    }
+/*SelectClass 下拉控件样式*/
+#divForSelect li {
+    overflow: hidden;
+}
+/*DropDownList 下拉选择样式*/
+.dropDownListClass {
+    position: absolute;
+    background: #8D9FAB;
+    border: 1px solid gray;
+    width: 180px;
+    color: white;
+    text-indent: 12px;
+    text-align: left;
+    display: none;
+}
+
+    .dropDownListClass li {
+        padding-right: 20px;
+        cursor: pointer;
+        height: 20px;
+        line-height: 20px;
+    }
+
+        .dropDownListClass li.on {
+            font-weight: bold;
+            background-color: white;
+            color: black;
+        }
+
+        .dropDownListClass li.child {
+            background-image: url(../img/iconRight.gif);
+            background-position: right center;
+            background-repeat: no-repeat;
+        }
+
+/*鼠标表格换色样式*/
+.tblTrMouseClass {
+    background: red;
+}
+
+/*弹出式窗口*/
+#smallwin {
+    width: 100%;
+    background: white;
+    text-align: center;
+}
+
+    #smallwin #smallheader {
+        height: 39px;
+        text-align: left;
+    }
+
+        #smallwin #smallheader h1 {
+            font-size: 12px;
+            height: 39px;
+            line-height: 39px;
+            background-image: url(../img/logoSmall.gif);
+            background-repeat: no-repeat;
+            color: #EEF3FD;
+            text-indent: 80px;
+            background-size: cover;
+        }
+
+            #smallwin #smallheader h1 span {
+                display: none;
+            }
+
+    #smallwin #sbody {
+        text-align: left;
+    }
+
+        #smallwin #sbody h2 {
+            text-indent: 2em;
+            border-bottom: 1px solid gray;
+            margin-bottom: 10px;
+            height: 40px;
+            line-height: 40px;
+            font-weight: normal;
+            font-size: 18px;
+            /*font-family: "Classic Grotesque W01","Hiragino Sans GB","STHeiti","Microsoft YaHei","WenQuanYi Micro Hei",Arial,SimSun,sans-serif;*/
+            letter-spacing: 4px;
+            text-align: left;
+        }
+
+.button4 {
+    border: 1px solid #ebebeb;
+    color: #242424;
+}
+
+.all_button_box {
+    text-align: left;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.pager .right {
+    color: #6e6e6e;
+}
+
+    .pager .right a {
+        color: #6e6e6e;
+    }
+
+
+.allchaxun {
+    height: 28px;
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/*0929*/
+
+.publicMenu {
+    background-color: #22a2ea;
+    color: #fff !important;
+}
+
+
+    .publicMenu a:link, .publicMenu a:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+
+.logo_right {
+    left: -30px;
+    position: relative;
+}
+
+.oabody input[type=radio] {
+    vertical-align: middle;
+    margin: 0 1px 0 5px;
+}
+
+.dataRange {
+    height: 24px;
+    position: relative;
+    margin-left: 6px;
+    float: none !important;
+}
+
+#listGridPager {
+    display: inline-block;
+    position: relative;
+    width: 960px;
+    /*font-family:*/ "Classic Grotesque W01","Hiragino Sans GB","STHeiti","Microsoft YaHei","WenQuanYi Micro Hei",Arial,SimSun,sans-serif;
+}
+
+
+
+#divPage .oacontent body {
+    background-color: #fff !important;
+}
+
+
+/*0704add*/
+
+.inner_tabs {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    text-indent: 30px;
+}
+
+    .inner_tabs li {
+        height: auto;
+        overflow: hidden;
+        line-height: 30px;
+        border: 0px;
+    }
+
+        .inner_tabs li .inner_inner_tabs {
+            text-indent: 70px !important;
+        }
+
+    .inner_tabs .bigFont {
+        background-position: 50px 8px;
+        display: block;
+        text-align: left;
+        text-indent: 50px;
+        position: relative;
+    }
+
+
+
+    .inner_tabs li .inner_inner2_tabs {
+        padding-left: 20px;
+    }
+
+    .inner_tabs li li a {
+        font-size: 14px;
+        color: #6e6e6e;
+        text-indent: 75px !important;
+    }
+
+    .inner_tabs li a {
+        color: #6e6e6e;
+        font-size: 14px;
+        display: block;
+        text-indent: 50px;
+    }
+
+        .inner_tabs li a:hover, .inner_tabs li a:focus, .inner_tabs li a:active {
+            background-color: #f8f8f8;
+        }
+
+    .inner_tabs .top_count {
+        background-color: #0ecd6d;
+        color: #fff;
+    }
+
+.inner_text {
+    max-width: 100%;
+    font-size: 12px;
+    word-wrap: break-word;
+    word-break: break-all;
+    display: inline-block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: 0px;
+}
+
+.inner_tabs .top_count {
+    display: inline-block;
+    /* top: 0px; */
+    border: 0px;
+    font-size: 10px;
+    min-width: 20px;
+    line-height: 18px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -o-border-radius: 8px;
+    text-align: center;
+    padding: 0px;
+    text-indent: 0px;
+    display: inline-block;
+    top: 8px;
+    position: relative;
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.lnksidebar-inner {
+    position: relative;
+}
+/*0704add*/
+
+@media only screen and (min-width: 1025px) {
+    .pubSidebar {
+        position: absolute;
+        width: 285px;
+    }
+
+    .oabody .oacontent {
+        margin-left: 285px;
+    }
+
+    .inner_text {
+        max-width: 65%;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1024px) {
+    .inner_text {
+        max-width: 56%;
+    }
+
+    .inner_tabs .top_count {
+        position: absolute;
+        top: 8px;
+    }
+
+    .inner_tabs li a {
+        position: relative;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width: 991px) {
+    .pubSidebar {
+        position: absolute;
+        width: 190px;
+    }
+
+    .oabody .oacontent {
+        margin-left: 190px;
+    }
+
+    .inner_text {
+        max-width:45%;
+    }
+
+    .inner_tabs .top_count {
+        position: absolute;
+        top: 8px;
+    }
+
+    .inner_tabs li a {
+        position: relative;
+    }
+}
+
+
+@media only screen and (max-width:767px) {
+
+    .pubSidebar {
+        position: relative;
+        width: 100%;
+    }
+
+    .oabody .oacontent {
+        margin-left: 0;
+    }
+
+    .inner_text {
+        max-width: 56%;
+    }
+
+    .inner_tabs .top_count {
+        position: absolute;
+        top: 8px;
+    }
+
+    .inner_tabs li a {
+        position: relative;
+    }
+}
+/*0906add*/
+
+.modal-header{border:0px;}
+
+@media(min-width:1601px) and (max-width:1900px){
+#header{min-height: 245px;max-height: 335px;height:315px !important;height:315px\9\0;}
+}	
+@media(min-width:1401px) and (max-width:1600px){
+#header{min-height: 245px;max-height: 335px;height:305px !important;height:305px\9\0;}
+}
+@media(min-width:1201px) and (max-width:1400px){
+#header{min-height: 235px;max-height: 335px;height:270px !important;height:270px\9\0;}
+}
+@media(min-width:992px) and (max-width:1200px){	
+#header{min-height:215px;max-height: 335px;height: 220px !important;height: 220px\9\0;}
+}
+@media(min-width:768px) and (max-width:991px){	
+#header{min-height:170px;max-height: 335px;height:210px !important;height:210px\9\0;}
+}
+
+/*0906add*/
+

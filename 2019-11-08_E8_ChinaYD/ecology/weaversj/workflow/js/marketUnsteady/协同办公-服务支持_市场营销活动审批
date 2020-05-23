@@ -2,9 +2,21 @@
 <script type="text/javascript">
 
 
-var WV_JS = "<script type='text/javascript' src='/weaversj/workflow/js/workflow_textareahidden.js?v"+Math.random()+"'></"+"script>"+
+var WV_JS = "<script type='text/javascript' src='/weaversj/workflow/js/marketUnsteady/workflow_textareahidden.js?v"+Math.random()+"'></"+"script>"+
  "<script type='text/javascript' src='/weaversj/workflow/publicJs/common.js?v"+Math.random()+"'></"+"script>";
 document.write(WV_JS);
 
 
 </script>
+<!--2020-05-08 zyz  add-->
+<script type="text/javascript">
+
+
+var WV_JS = "<script type='text/javascript' src='/weaversj/workflow/js/marketUnsteady/workflow_marketJs.js?v"+Math.random()+"'></"+"script>"+
+ "<script type='text/javascript' src='/weaversj/workflow/publicJs/common.js?v"+Math.random()+"'></"+"script>";
+document.write(WV_JS);
+
+
+</script>
+
+
